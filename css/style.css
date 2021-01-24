@@ -1,0 +1,130 @@
+/*
+* FILE : style.css
+* PROGRAMMER : Hongsik Eom
+* FIRST VERSION : December 11, 2020
+* DESCRIPTION :
+* This file is used to do the styling on the HTML elements
+* that will be shown to the user
+*/
+
+
+
+body
+{
+  background: url('../img/main.jpg') no-repeat center center fixed;  /* Background img */
+  background-color: #cccccc;      /* Background color */
+  background-size: 100% 100%;     /* Background size */
+  background-origin: boder-box;   /*o rigin position of a background image */
+}
+
+
+select
+{
+  width: 320px;    /* Full width */
+  height: 30px;    /* Full height */
+}
+
+
+h1
+{
+  font-family: 'Open Sans Condensed', sans-serif;    /* Font */
+  color: white;               /* Font color */
+  font-size: 100px;           /* Font size */
+  margin-top: 30px;           /* margin top */
+  margin-bottom: 10px;        /* margin bottom */
+}
+
+
+.label
+{
+  color: white;                /* Font color */
+  font-family: 'Open Sans Condensed', sans-serif;    /* Font */
+  font-weight: bold;           /* Font weight */
+  font-size: 28px;             /* Font size */
+}
+
+
+button {
+  width: 80px;                 /* Width of button */
+  height: 30px;                /* Height of button */
+  background-color: white;     /* Button background color */
+  color: #5c6e91;              /* Font color */
+}
+
+
+button:hover {
+  color: #008CBA;               /* Font color */
+}
+
+
+/* Div that contains all elemtns on the web page*/
+.editorForm{
+  text-align: center;            /* Align text to the center */
+  margin: auto;                  /* Auto margin */
+}
+
+
+/* Div that contains buttons, dropbox, textarea*/
+.selectDiv
+{
+  margin-bottom: 20px;         /* margin bottom */
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 220px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  text-align: center;            /* Text align to the center */
+  background-color: #fefefe;     /* Background color */
+  margin: auto;                  /* Auto margin */
+  padding: 20px;                 /* Padding */
+  border: 1px solid #888;        /* Border */
+  width: 40%;                    /* Width of modal */
+}
+
+
+/* File name input box*/
+.newFileName {
+  margin-bottom: 10px;           /* Margin bottom */
+  height: 24px                   /* Width of input box */
+}
+
+
+/* Messages on the modals*/
+.messages{
+  color: #34626c;                /* Font color */
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;                /* Font color */
+  float: right;                  /* Located on the right upper coner*/
+  font-size: 28px;               /* Font size */
+  font-weight: bold;             /* Font weight */
+}
+
+.close:hover,
+.close:focus {
+  color: #000;                   /* Font color */
+  cursor: pointer;               /* Change the shpae of cursor */
+}
+
+/* Error message */
+.errorMessage
+{
+  color: red;                    /* Font color */
+}

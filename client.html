@@ -1,0 +1,85 @@
+<!--/*
+* FILE : client.html
+* PROGRAMMER : Hongsik Eom
+* FIRST VERSION : December 11, 2020
+* DESCRIPTION :
+* This web application gives features that user can write, udpate, and save their words to
+* their files system. JQuery are mostly used in this application to interact with HTML element and
+* request or receive contetns from server. This file contains all HTML elements that
+* will be shown to the user through webpage.
+*/-->
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>HJ Text Editor</title>
+  <!-- style sheet google fonts link -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Div contains input box, buttons, and texarea -->
+  <div id= "editorForm" class="editorForm">
+    <h1>HJ Text Editor</h1>
+    <div class="selectDiv">
+      <span class="label">Select File </span>
+      <select id="fileList" width="80px"></select>
+      <button type="button" id="New">New</button>
+      <button type="button" id="Save">Save</button>
+      <button type="button" id="SaveAs">SaveAs</button><br>
+    </div>
+    <textarea id="textarea" rows="30" cols="70" style="resize: none; overflow:hidden;"></textarea>
+  </div>
+
+  <!-- Modal that user will use to enrter a file name to save texts in the text area -->
+  <div id="saveModal" class="saveModal modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="messages">Enter a file name to create</h1>
+      <input type="text" id="newFileName" class="newFileName" placeholder="SeanCleark.txt">
+      <button type="button" id="saveFile">Save File</button>
+      <label class="errorMessage"></label>
+    </div>
+  </div>
+
+  <!-- Modal that user will use to save contents or not -->
+  <div id="checkModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="messages checkMessage">Do you want to save changes?</h1>
+      <button type="button" class="saveYes">Yes</button>
+      <button type="button" class="saveNo">No</button>
+      <button type="button" class="saveCancel">Cancel</button>
+    </div>
+  </div>
+
+
+  <!-- Modal that user will use to decide overwrite the file or create a new one -->
+  <div id="overwiteModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="messages checkMessage">File already exists. Do you want to overwrite?</h1>
+      <button type="button" class="overWriteYes">Yes</button>
+      <button type="button" class="overWirteNo">No</button>
+      <button type="button" class="overWriteCancel">Cancel</button>
+    </div>
+  </div>
+
+
+  <!-- Modal that will display confirmation message to user -->
+  <div id="confirmModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 class="messages confirmMessage"></h1>
+    </div>
+  </div>
+
+  <!-- js file -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/index.js" charset="utf-8"></script>
+</body>
+</html>
